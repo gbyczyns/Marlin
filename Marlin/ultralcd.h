@@ -83,7 +83,8 @@
     void lcd_bootscreen();
   #endif
 
-  #define LCD_UPDATE_INTERVAL 100
+  // https://github.com/MarlinFirmware/Marlin/issues/3691
+  #define LCD_UPDATE_INTERVAL 200
   #define BUTTON_EXISTS(BN) (defined(BTN_## BN) && BTN_## BN >= 0)
   #define BUTTON_PRESSED(BN) !READ(BTN_## BN)
 
